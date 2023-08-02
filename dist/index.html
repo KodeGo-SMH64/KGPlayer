@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="relative w-full h-screen overflow-hidden flex flex-col px-0 box-border items-center justify-center bg-[url(/public/music-player@3x.png)] bg-cover bg-no-repeat bg-top text-center text-sm text-gray-200 font-noto-sans">
+      <!-- SEEK BAR -->
       <div class="relative rounded-[34px] bg-gray-300 shadow-[5px_4px_5px_2px_rgba(0,_0,_0,_0.25)] [backdrop-filter:blur(2px)] w-[466px] h-[711px]">
         <div class="absolute top-[466px] left-[39px] w-[386px] h-[43px]">
           <div class="absolute top-[21px] left-[1px] w-[385px] h-[22px]">
@@ -17,6 +18,8 @@
             <div class="absolute top-[8px] left-[0px] rounded-31xl bg-slategray w-[173px] h-[5px]"></div>
             <div class="absolute top-[0px] left-[161px] rounded-[50%] bg-white shadow-[0px_4px_10px_rgba(0,_0,_0,_0.25)] box-border w-[22px] h-[22px] border-[5px] border-solid border-teal"></div>
           </div>
+
+          <!-- TIMELINE -->
           <div class="absolute top-[0px] left-[348px] font-semibold flex items-center justify-center w-[38px] h-4">
             03:32
           </div>
@@ -24,25 +27,35 @@
             01:44
           </div>
         </div>
+
+        <!-- ARTIST & ALBUM -->
         <div class="absolute top-[calc(50%_-_290.5px)] left-[calc(50%_-_185px)] w-[371px] h-[258px] opacity-[0.8]">
           <img class="absolute top-[4.69px] left-[129.02px] w-[242.36px] h-[242.36px] object-cover [&.animate]:animate-[1s_linear_0s_infinite_normal_forwards_rotate-center] opacity-[1]" alt="cd" src="/cd@2x.5cb70291.png" data-animate-on-scroll="">
 
           <img class="absolute top-[-3px] left-[9px] rounded-[5px] w-[270.02px] h-[266.02px] object-cover" alt="album" src="/artist@2x.8c52d6f3.png">
         </div>
+
+        <!-- PLAY/PREVIOUS/NEXT BUTTONS -->
         <div class="absolute top-[542px] left-[81px] w-[303.87px] h-[120px]">
-          <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[92px] w-[120px] h-[120px]">
+          <div class="relative">
+            <!-- PREVIOUS BUTTON -->
+            <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[41.87px] h-[42.25px]" style="z-index: 2">
+            <img class="absolute top-[calc(100%_-_1px)] left-[calc(50%_-_24.94px)] w-[50px] h-[50px]" alt="prev-track" src="/prev-track.6c55074f.svg">
+          </button>
+        
+            <!-- PLAY BUTTON -->
+            <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[92px] w-[120px] h-[120px]">
             <img class="absolute top-[calc(50%_-_66px)] left-[calc(50%_-_70px)] w-[140px] h-[140px]" alt="play-track" src="/play-track.f417bfdc.svg">
           </button>
-          
-          <div class="absolute top-[39px] left-[calc(50%_-_151.94px)] w-[303.87px] h-[42.25px]">
-            <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[41.87px] h-[42.25px]" style="z-index: 2">
-              <img class="absolute top-[calc(50%_-_21.12px)] left-[calc(50%_-_24.94px)] w-[49.87px] h-[50.25px]" alt="prev-track" src="/prev-track.6c55074f.svg">
-            </button>
+        
+            <!-- NEXT BUTTON -->
             <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[261.87px] w-[41.87px] h-[42.25px]" style="z-index: 2">
-              <img class="absolute top-[calc(50%_-_21.12px)] left-[calc(50%_-_24.94px)] w-[49.87px] h-[50.25px]" alt="next-track" src="/next-track.cfe38949.svg">
+              <img class="absolute top-[calc(100%_-_1px)] left-[calc(50%_-_24.94px)] w-[50px] h-[50px]" alt="next-track" src="/next-track.cfe38949.svg">
             </button>
           </div>
         </div>
+        
+        <!-- Title & Artist -->
         <div class="absolute top-[362px] left-[71px] w-[323px] flex flex-col items-center justify-start gap-[5px] text-[24px] text-whitesmoke">
           <div class="self-stretch relative font-semibold [text-shadow:4px_4px_4px_rgba(0,_0,_0,_0.25)]">
             Never Gonna Give You Up
@@ -54,6 +67,7 @@
       </div>
     </div>
 
+      <!-- SCRIPT -->
     <script>var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
 var observer = new IntersectionObserver((entries)=>{
     for (const entry of entries)if (entry.isIntersecting || entry.intersectionRatio > 0) {

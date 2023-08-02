@@ -13,6 +13,7 @@
   </head>
   <body>
     <div class="relative w-full h-screen overflow-hidden flex flex-col px-0 box-border items-center justify-center bg-[url(/public/music-player@3x.png)] bg-cover bg-no-repeat bg-top text-center text-sm text-gray-200 font-noto-sans">
+      <!-- SEEK BAR -->
       <div
         class="relative rounded-[34px] bg-gray-300 shadow-[5px_4px_5px_2px_rgba(0,_0,_0,_0.25)] [backdrop-filter:blur(2px)] w-[466px] h-[711px]"
       >
@@ -24,10 +25,12 @@
             <div
               class="absolute top-[8px] left-[0px] rounded-31xl bg-slategray w-[173px] h-[5px]"
             ></div>
-            <div
+            <div 
               class="absolute top-[0px] left-[161px] rounded-[50%] bg-white shadow-[0px_4px_10px_rgba(0,_0,_0,_0.25)] box-border w-[22px] h-[22px] border-[5px] border-solid border-teal"
             ></div>
           </div>
+
+          <!-- TIMELINE -->
           <div
             class="absolute top-[0px] left-[348px] font-semibold flex items-center justify-center w-[38px] h-4"
           >
@@ -39,6 +42,8 @@
             01:44
           </div>
         </div>
+
+        <!-- ARTIST & ALBUM -->
         <div
           class="absolute top-[calc(50%_-_290.5px)] left-[calc(50%_-_185px)] w-[371px] h-[258px] opacity-[0.8]"
         >
@@ -55,8 +60,23 @@
             src="/public/artist@2x.png"
           />
         </div>
+
+        <!-- PLAY/PREVIOUS/NEXT BUTTONS -->
         <div class="absolute top-[542px] left-[81px] w-[303.87px] h-[120px]">
-          <button
+          <div class="relative">
+            <!-- PREVIOUS BUTTON -->
+            <button
+            class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[41.87px] h-[42.25px]" style="z-index: 2;"
+          >
+            <img
+              class="absolute top-[calc(100%_-_1px)] left-[calc(50%_-_24.94px)] w-[50px] h-[50px]"
+              alt="prev-track"
+              src="/public/prev-track.svg"
+            />
+          </button>
+        
+            <!-- PLAY BUTTON -->
+            <button
             class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[92px] w-[120px] h-[120px]"
           >
             <img
@@ -65,30 +85,21 @@
               src="/public/play-track.svg"
             />
           </button>
-          
-          <div
-            class="absolute top-[39px] left-[calc(50%_-_151.94px)] w-[303.87px] h-[42.25px]" 
-          >
-            <button
-              class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[41.87px] h-[42.25px]" style="z-index: 2;"
-            >
-              <img
-                class="absolute top-[calc(50%_-_21.12px)] left-[calc(50%_-_24.94px)] w-[49.87px] h-[50.25px]"
-                alt="prev-track"
-                src="/public/prev-track.svg"
-              />
-            </button>
+        
+            <!-- NEXT BUTTON -->
             <button
               class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[261.87px] w-[41.87px] h-[42.25px]" style="z-index: 2;"
             >
               <img
-                class="absolute top-[calc(50%_-_21.12px)] left-[calc(50%_-_24.94px)] w-[49.87px] h-[50.25px]"
+                class="absolute top-[calc(100%_-_1px)] left-[calc(50%_-_24.94px)] w-[50px] h-[50px]"
                 alt="next-track"
                 src="/public/next-track.svg"
               />
             </button>
           </div>
         </div>
+        
+        <!-- Title & Artist -->
         <div
           class="absolute top-[362px] left-[71px] w-[323px] flex flex-col items-center justify-start gap-[5px] text-[24px] text-whitesmoke"
         >
@@ -106,6 +117,7 @@
       </div>
     </div>
 
+      <!-- SCRIPT -->
     <script>
     var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
     var observer = new IntersectionObserver(
