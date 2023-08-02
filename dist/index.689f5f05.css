@@ -450,6 +450,10 @@
   height: 711px;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .w-\[120px\] {
   width: 120px;
 }
@@ -1526,7 +1530,7 @@
   background-clip: text;
 }
 
-.bg-\[top\] {
+.bg-\[top\], .bg-top {
   background-position: top;
 }
 

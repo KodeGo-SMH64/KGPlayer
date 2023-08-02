@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400;600&display=swap">
   </head>
   <body>
-    <div class="relative w-full h-[1026px] overflow-hidden flex flex-col py-[99px] px-0 box-border items-center justify-center bg-[url(/public/music-player@3x.png)] bg-cover bg-no-repeat bg-[top] text-center text-sm text-gray-200 font-noto-sans hover:items-center hover:justify-center lg:flex lg:hover:flex md:hover:hidden sm:pt-[104px] sm:box-border sm:hover:flex">
+    <div class="relative w-full h-screen overflow-hidden flex flex-col px-0 box-border items-center justify-center bg-[url(/public/music-player@3x.png)] bg-cover bg-no-repeat bg-top text-center text-sm text-gray-200 font-noto-sans">
       <div class="relative rounded-[34px] bg-gray-300 shadow-[5px_4px_5px_2px_rgba(0,_0,_0,_0.25)] [backdrop-filter:blur(2px)] w-[466px] h-[711px]">
         <div class="absolute top-[466px] left-[39px] w-[386px] h-[43px]">
           <div class="absolute top-[21px] left-[1px] w-[385px] h-[22px]">
@@ -25,19 +25,20 @@
           </div>
         </div>
         <div class="absolute top-[calc(50%_-_290.5px)] left-[calc(50%_-_185px)] w-[371px] h-[258px] opacity-[0.8]">
-          <img class="absolute top-[4.69px] left-[129.02px] w-[242.36px] h-[242.36px] object-cover [&.animate]:animate-[1s_linear_0s_infinite_normal_forwards_rotate-center] opacity-[1]" alt="" src="/cd@2x.5cb70291.png" data-animate-on-scroll="">
+          <img class="absolute top-[4.69px] left-[129.02px] w-[242.36px] h-[242.36px] object-cover [&.animate]:animate-[1s_linear_0s_infinite_normal_forwards_rotate-center] opacity-[1]" alt="cd" src="/cd@2x.5cb70291.png" data-animate-on-scroll="">
 
-          <img class="absolute top-[-3px] left-[9px] rounded-[5px] w-[270.02px] h-[266.02px] object-cover" alt="" src="/artist@2x.8c52d6f3.png">
+          <img class="absolute top-[-3px] left-[9px] rounded-[5px] w-[270.02px] h-[266.02px] object-cover" alt="album" src="/artist@2x.8c52d6f3.png">
         </div>
         <div class="absolute top-[542px] left-[81px] w-[303.87px] h-[120px]">
           <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[92px] w-[120px] h-[120px]">
             <img class="absolute top-[calc(50%_-_66px)] left-[calc(50%_-_70px)] w-[140px] h-[140px]" alt="play-track" src="/play-track.f417bfdc.svg">
           </button>
+          
           <div class="absolute top-[39px] left-[calc(50%_-_151.94px)] w-[303.87px] h-[42.25px]">
-            <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[41.87px] h-[42.25px]">
+            <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[41.87px] h-[42.25px]" style="z-index: 2">
               <img class="absolute top-[calc(50%_-_21.12px)] left-[calc(50%_-_24.94px)] w-[49.87px] h-[50.25px]" alt="prev-track" src="/prev-track.6c55074f.svg">
             </button>
-            <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[261.87px] w-[41.87px] h-[42.25px]">
+            <button class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[261.87px] w-[41.87px] h-[42.25px]" style="z-index: 2">
               <img class="absolute top-[calc(50%_-_21.12px)] left-[calc(50%_-_24.94px)] w-[49.87px] h-[50.25px]" alt="next-track" src="/next-track.cfe38949.svg">
             </button>
           </div>

@@ -12,9 +12,7 @@
     />
   </head>
   <body>
-    <div
-      class="relative w-full h-[1026px] overflow-hidden flex flex-col py-[99px] px-0 box-border items-center justify-center bg-[url(/public/music-player@3x.png)] bg-cover bg-no-repeat bg-[top] text-center text-sm text-gray-200 font-noto-sans hover:items-center hover:justify-center lg:flex lg:hover:flex md:hover:hidden sm:pt-[104px] sm:box-border sm:hover:flex"
-    >
+    <div class="relative w-full h-screen overflow-hidden flex flex-col px-0 box-border items-center justify-center bg-[url(/public/music-player@3x.png)] bg-cover bg-no-repeat bg-top text-center text-sm text-gray-200 font-noto-sans">
       <div
         class="relative rounded-[34px] bg-gray-300 shadow-[5px_4px_5px_2px_rgba(0,_0,_0,_0.25)] [backdrop-filter:blur(2px)] w-[466px] h-[711px]"
       >
@@ -46,14 +44,14 @@
         >
           <img
             class="absolute top-[4.69px] left-[129.02px] w-[242.36px] h-[242.36px] object-cover [&.animate]:animate-[1s_linear_0s_infinite_normal_forwards_rotate-center] opacity-[1]"
-            alt=""
+            alt="cd"
             src="/public/cd@2x.png"
             data-animate-on-scroll
           />
 
           <img
             class="absolute top-[-3px] left-[9px] rounded-[5px] w-[270.02px] h-[266.02px] object-cover"
-            alt=""
+            alt="album"
             src="/public/artist@2x.png"
           />
         </div>
@@ -67,11 +65,12 @@
               src="/public/play-track.svg"
             />
           </button>
+          
           <div
-            class="absolute top-[39px] left-[calc(50%_-_151.94px)] w-[303.87px] h-[42.25px]"
+            class="absolute top-[39px] left-[calc(50%_-_151.94px)] w-[303.87px] h-[42.25px]" 
           >
             <button
-              class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[41.87px] h-[42.25px]"
+              class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[0px] w-[41.87px] h-[42.25px]" style="z-index: 2;"
             >
               <img
                 class="absolute top-[calc(50%_-_21.12px)] left-[calc(50%_-_24.94px)] w-[49.87px] h-[50.25px]"
@@ -80,7 +79,7 @@
               />
             </button>
             <button
-              class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[261.87px] w-[41.87px] h-[42.25px]"
+              class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[261.87px] w-[41.87px] h-[42.25px]" style="z-index: 2;"
             >
               <img
                 class="absolute top-[calc(50%_-_21.12px)] left-[calc(50%_-_24.94px)] w-[49.87px] h-[50.25px]"
