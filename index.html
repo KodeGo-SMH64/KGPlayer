@@ -6,6 +6,7 @@
     <title>KGPlayer</title>
     <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
     <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="styles.css">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400;600&display=swap"
@@ -13,23 +14,22 @@
   </head>
   <body>
     <div class="relative w-full h-screen overflow-hidden flex flex-col px-0 box-border items-center justify-center bg-[url(/public/music-player@3x.png)] bg-cover bg-no-repeat bg-top text-center text-sm text-gray-200 font-noto-sans">
-      <!-- SEEK BAR -->
       <div
-        class="relative rounded-[34px] bg-gray-300 shadow-[5px_4px_5px_2px_rgba(0,_0,_0,_0.25)] [backdrop-filter:blur(2px)] w-[466px] h-[711px]"
-      >
+      class="relative rounded-[34px] bg-gray-300 shadow-[5px_4px_5px_2px_rgba(0,_0,_0,_0.25)] [backdrop-filter:blur(2px)] w-[466px] h-[711px]">
+
+      <!-- SEEK BAR -->
+      
         <div class="absolute top-[466px] left-[39px] w-[386px] h-[43px]">
           <div class="absolute top-[21px] left-[1px] w-[385px] h-[22px]">
-            <div
-              class="absolute top-[8px] left-[0px] rounded-31xl bg-gray-100 shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[385px] h-[5px]"
-            ></div>
-            <div
-              class="absolute top-[8px] left-[0px] rounded-31xl bg-slategray w-[173px] h-[5px]"
-            ></div>
-            <div 
-              class="absolute top-[0px] left-[161px] rounded-[50%] bg-white shadow-[0px_4px_10px_rgba(0,_0,_0,_0.25)] box-border w-[22px] h-[22px] border-[5px] border-solid border-teal"
-            ></div>
+            <input
+          id="seekbar"
+          type="range"
+          value="0"
+          class="appearance-none absolute w-[388px] h-[5px] rounded-31xl top-[8px] left-[-4px] cursor-pointer shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)]"
+          >
+          <div id="thumbSlider"></div>
           </div>
-
+          
           <!-- TIMELINE -->
           <div
             class="absolute top-[0px] left-[348px] font-semibold flex items-center justify-center w-[38px] h-4"
@@ -75,20 +75,26 @@
             />
           </button>
         
-            <!-- PLAY BUTTON -->
+            <!-- PLAY & PAUSE BUTTONS -->
             <button
-            class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[92px] w-[120px] h-[120px]"
-          >
-            <img
-              class="absolute top-[calc(50%_-_66px)] left-[calc(50%_-_70px)] w-[140px] h-[140px]"
-              alt="play-track"
-              src="/public/play-track.svg"
-            />
-          </button>
-        
+              onclick="playPause(); observeAnimations();"
+              id="playButton"
+              class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[0px] left-[92px] w-[120px] h-[120px]"
+            >
+            <!-- PLAY ICON -->
+            <img class="absolute top-[calc(50%_-_66px)] left-[calc(50%_-_70px)] w-[140px] h-[140px] playButtonIcon play"
+            src="/public/play-track.svg" />
+
+            <!-- PAUSE ICON -->
+            <img 
+              class="absolute top-[calc(50%_-_66px)] left-[calc(50%_-_70px)] w-[140px] h-[140px] playButtonIcon pause"
+              src="/public/pause-track.svg" />
+            </button>
+              
             <!-- NEXT BUTTON -->
             <button
-              class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[50px] left-[260px] w-[41.87px] h-[42.25px]" style="z-index: 2;"
+              class="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[50px] left-[260px] w-[41.87px] h-[42.25px]"
+              style="z-index: 2;"
             >
               <img
                 class="absolute top-[calc(1%_-_1px)] left-[calc(50%_-_24.94px)] w-[50px] h-[50px]"
@@ -99,45 +105,137 @@
           </div>
         </div>
         
-        <!-- Title & Artist -->
+        <!-- TITLE & ARTIST -->
         <div
           class="absolute top-[362px] left-[71px] w-[323px] flex flex-col items-center justify-start gap-[5px] text-[24px] text-whitesmoke"
         >
           <div
+            id="songTitle"
             class="self-stretch relative font-semibold [text-shadow:4px_4px_4px_rgba(0,_0,_0,_0.25)]"
           >
             Never Gonna Give You Up
           </div>
           <div
+            id="artistName"
             class="relative text-[20px] [text-shadow:4px_4px_4px_rgba(0,_0,_0,_0.25)]"
           >
             Rick Astley
           </div>
         </div>
       </div>
+      <!-- AUDIO PLAYER ____________HIDE controls -->
+    <audio id="audioPlayer" > 
+      <source src="./public/Rick Astley - Never Gonna Give You Up.MP3" type="audio/mpeg">
+    </audio>
     </div>
+
 
       <!-- SCRIPT -->
     <script>
-    var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
-    var observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting || entry.intersectionRatio > 0) {
-            const targetElement = entry.target;
-            targetElement.classList.add("animate");
-            observer.unobserve(targetElement);
-          }
+
+  // SCRIPT FOR AUDIO PLAYER
+
+const seekbar = document.getElementById("seekbar");
+const player = document.getElementById("audioPlayer");
+const playButton = document.getElementById("playButton");
+const thumbSlider = document.getElementById("thumbSlider");
+
+let animationObserver;
+let isPlaying = false;
+
+function playPause() {
+  if (player.paused) {
+    player.play();
+    playButton.classList.add("playing");
+    updateSeekbar();
+    observeAnimations();
+  } else {
+    player.pause();
+    playButton.classList.remove("playing");
+    setTimeout(pauseAnimation, 50);
+  }
+}
+
+function updateSeekbar() {
+  seekbar.value = player.currentTime;
+  thumbSlider.style.left = `${(seekbar.value / seekbar.max) * 100}%`; // MOVE THE THUMB SLIDER ALONG THE SEEKBAR
+  if (!player.paused) {
+    requestAnimationFrame(updateSeekbar);
+  }
+}
+
+player.addEventListener("play", () => {
+  playButton.classList.add("playing");
+  updateSeekbar();
+});
+
+player.addEventListener("pause", () => {
+  playButton.classList.remove("playing");
+  pauseAnimation();
+});
+
+seekbar.addEventListener("input", () => {
+  player.currentTime = seekbar.value; // SEEK THE AUDIO TO THE POSITION OF THE SEEKBAR
+  thumbSlider.style.left = `${(seekbar.value / seekbar.max) * 100}%`; // MOVE THE THUMB SLIDER ALONG THE SEEKBAR
+});
+
+thumbSlider.addEventListener("mousedown", (event) => {
+  // WHEN THE THUMB SLIDER IS CLICKED, UPDATE THE SEEKBAR AND SEEK TO THE CLICKED POSITION
+  const rect = seekbar.getBoundingClientRect();
+  const offsetX = event.clientX - rect.left;
+  const seekbarWidth = rect.width;
+  const seekPosition = (offsetX / seekbarWidth) * seekbar.max;
+  player.currentTime = seekPosition;
+  thumbSlider.style.left = `${(seekPosition / seekbar.max) * 100}%`; // MOVE THE THUMB SLIDER ALONG THE SEEKBAR
+
+  // PAUSE THE AUDIO WHILE DRAGGING THE SLIDER
+  player.pause();
+
+  // EVENT LISTENER FOR WHEN THE USER STOPS DRAGGING THE THUMB SLIDER
+  const stopDrag = () => {
+    // REMOVE THE EVENT LISTENER
+    window.removeEventListener("mouseup", stopDrag);
+    // RESUME PLAYING THE AUDIO AFTER DRAGGING THE SLIDER
+    player.play();
+  };
+
+  // ADD AN EVENT LISTENER TO STOP DRAGGING WHEN THE USER RELEASES THE MOUSE
+  window.addEventListener("mouseup", stopDrag);
+});
+
+function observeAnimations() {
+  const scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+  if (animationObserver) {
+    animationObserver.disconnect();
+  }
+
+  animationObserver = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting || entry.intersectionRatio > 0) {
+          const targetElement = entry.target;
+          targetElement.classList.add("animate");
+          animationObserver.unobserve(targetElement);
         }
-      },
-      {
-        threshold: 0.15,
       }
-    );
-    
-    for (let i = 0; i < scrollAnimElements.length; i++) {
-      observer.observe(scrollAnimElements[i]);
+    },
+    {
+      threshold: 0.15,
     }
+  );
+
+  for (let i = 0; i < scrollAnimElements.length; i++) {
+    animationObserver.observe(scrollAnimElements[i]);
+  }
+}
+
+function pauseAnimation() {
+  const scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+  for (let i = 0; i < scrollAnimElements.length; i++) {
+    const targetElement = scrollAnimElements[i];
+    targetElement.classList.remove("animate");
+  }
+}
   </script>
   </body>
 </html>

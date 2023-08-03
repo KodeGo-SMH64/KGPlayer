@@ -1,0 +1,32 @@
+#seekbar {
+  background-color: azure;
+  border-radius: 31px;
+  width: 388px;
+  height: 5px;
+}
+
+#seekbar::-webkit-slider-thumb {
+  appearance: none;
+  background-color: azure;
+  border: 4px solid teal;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 2px 4px #0003;
+}
+
+.playButtonIcon.pause {
+  animation-play-state: paused;
+  display: none;
+}
+
+.playing .playButtonIcon.pause {
+  animation-play-state: running;
+  display: block;
+}
+
+.playing .playButtonIcon.play {
+  display: none;
+}
+
+/*# sourceMappingURL=index.1303bb05.css.map */

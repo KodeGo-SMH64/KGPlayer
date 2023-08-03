@@ -1,0 +1,32 @@
+#seekbar {
+            
+    width: 388px;
+    height: 5px;
+    border-radius: 31px;
+    background-color: azure;
+    }
+
+#seekbar::-webkit-slider-thumb {
+      appearance: none;
+      width: 20px; 
+      height: 20px;
+      background-color: azure;
+      border-radius: 50%;
+      border:solid;
+      border-color: teal;
+      border-width: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+.playButtonIcon.pause {
+    display: none;
+    animation-play-state: paused; /* Set the animation to pause state by default */
+  }
+  
+  .playing .playButtonIcon.pause {
+    display: block;
+    animation-play-state: running; /* Set the animation to running state when audio is playing */
+  }
+  
+  .playing .playButtonIcon.play {
+    display: none;
+  }
