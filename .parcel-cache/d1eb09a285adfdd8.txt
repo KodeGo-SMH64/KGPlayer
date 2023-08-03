@@ -1,6 +1,6 @@
-7722
+7726
 41C:\musicplayah\node_modules\source-map-js133354631332245692 1
-19C:\musicplayah\dist133355509900982545 1
+19C:\musicplayah\dist133355718365586795 1
 81C:\musicplayah\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\dist133354631348757151 1
 69C:\musicplayah\node_modules\tailwindcss\src\value-parser\stringify.js133354631391216220 0
 68C:\musicplayah\node_modules\@swc\helpers\_\_async_generator_delegate133354631390697617 1
@@ -65,7 +65,7 @@
 55C:\musicplayah\node_modules\utility-types\dist\index.js133354631307800228 0
 70C:\musicplayah\node_modules\svgo\plugins\removeAttributesBySelector.js133354631348059014 0
 56C:\musicplayah\node_modules\@swc\helpers\lib\_type_of.js133354631389186538 0
-25C:\musicplayah\index.html133355509859761711 0
+25C:\musicplayah\index.html133355718327931341 0
 35C:\musicplayah\node_modules\timsort133354631317435166 1
 74C:\musicplayah\node_modules\csso\node_modules\css-tree\cjs\lexer\error.cjs133354631355497407 0
 39C:\musicplayah\node_modules\any-promise133354631345166746 1
@@ -109,6 +109,9 @@
 57C:\musicplayah\node_modules\sucrase\dist\parser\traverser133354631376834880 1
 60C:\musicplayah\node_modules\css-tree\cjs\lexer\structure.cjs133354631371922872 0
 24C:\musicplayah\README.md133354339420000000 0
+55C:\musicplayah\node_modules\tailwindcss\src\css\LICENSE133354631316906579 0
+77C:\musicplayah\node_modules\postcss-selector-parser\dist\util\ensureObject.js133354631318882576 0
+25C:\musicplayah\styles.css133355633655864795 0
 38C:\musicplayah\node_modules\concat-map133354631314433192 1
 52C:\musicplayah\node_modules\path-is-absolute\license133354631303236105 0
 46C:\musicplayah\node_modules\chrome-trace-event133354631315570159 1
@@ -305,20 +308,6 @@
 90C:\musicplayah\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace\Number.js133354631349375512 0
 36C:\musicplayah\node_modules\boolbase133354631302961919 1
 41C:\musicplayah\node_modules\camelcase-css133354631309745027 1
-41C:\musicplayah\node_modules\mdn-data\l10n133354631318093402 1
-80C:\musicplayah\node_modules\css-select\node_modules\domutils\lib\esm\legacy.d.ts133354631362526533 0
-72C:\musicplayah\node_modules\@parcel\runtime-js\src\helpers\bundle-url.js133354631333651920 0
-43C:\musicplayah\node_modules\xxhash-wasm\cjs133354631315360715 1
-54C:\musicplayah\node_modules\@parcel\cache\src\types.js133354631333532252 0
-33C:\musicplayah\node_modules\fastq133354631322919994 1
-75C:\musicplayah\node_modules\caniuse-lite\data\features\deviceorientation.js133354631389984398 0
-64C:\musicplayah\node_modules\ordered-binary\assets\powers-dre.png133354631325692786 0
-50C:\musicplayah\node_modules\yaml\dist\parse\cst.js133354631353492755 0
-71C:\musicplayah\node_modules\tailwindcss\lib\util\parseAnimationValue.js133354631386613907 0
-62C:\musicplayah\node_modules\caniuse-lite\dist\lib\supported.js133354631406666003 0
-86C:\musicplayah\node_modules\css-select\node_modules\entities\lib\decode_codepoint.d.ts133354631361987979 0
-94C:\musicplayah\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\removeMetadata.js133354631355816538 0
-38C:\musicplayah\node_modules\didyoumean133354631309764988 1
 71C:\musicplayah\node_modules\tailwindcss\lib\util\flattenColorPalette.js133354631369707339 0
 57C:\musicplayah\node_modules\@nodelib\fs.scandir\out\types133354631335512071 1
 53C:\musicplayah\node_modules\utility-types\SECURITY.md133354631327209151 0
@@ -341,6 +330,20 @@
 75C:\musicplayah\node_modules\csso\node_modules\css-tree\lib\walker\create.js133354631379896729 0
 60C:\musicplayah\node_modules\postcss-value-parser\lib\walk.js133354631314393292 0
 48C:\musicplayah\node_modules\yallist\package.json133354631307221773 0
+41C:\musicplayah\node_modules\mdn-data\l10n133354631318093402 1
+80C:\musicplayah\node_modules\css-select\node_modules\domutils\lib\esm\legacy.d.ts133354631362526533 0
+72C:\musicplayah\node_modules\@parcel\runtime-js\src\helpers\bundle-url.js133354631333651920 0
+43C:\musicplayah\node_modules\xxhash-wasm\cjs133354631315360715 1
+54C:\musicplayah\node_modules\@parcel\cache\src\types.js133354631333532252 0
+33C:\musicplayah\node_modules\fastq133354631322919994 1
+75C:\musicplayah\node_modules\caniuse-lite\data\features\deviceorientation.js133354631389984398 0
+64C:\musicplayah\node_modules\ordered-binary\assets\powers-dre.png133354631325692786 0
+50C:\musicplayah\node_modules\yaml\dist\parse\cst.js133354631353492755 0
+71C:\musicplayah\node_modules\tailwindcss\lib\util\parseAnimationValue.js133354631386613907 0
+62C:\musicplayah\node_modules\caniuse-lite\dist\lib\supported.js133354631406666003 0
+86C:\musicplayah\node_modules\css-select\node_modules\entities\lib\decode_codepoint.d.ts133354631361987979 0
+94C:\musicplayah\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\removeMetadata.js133354631355816538 0
+38C:\musicplayah\node_modules\didyoumean133354631309764988 1
 65C:\musicplayah\node_modules\abortcontroller-polyfill\package.json133354631330789583 0
 65C:\musicplayah\node_modules\yaml\dist\schema\yaml-1.1\binary.d.ts133354631380205874 0
 54C:\musicplayah\node_modules\htmlnano\docs\package.json133354631354250728 0
@@ -747,13 +750,13 @@
 72C:\musicplayah\node_modules\@swc\helpers\_\_super_prop_base\package.json133354631395803963 0
 60C:\musicplayah\node_modules\resolve\test\pathfilter\deep_ref133354631360933398 1
 68C:\musicplayah\node_modules\yaml\browser\dist\compose\compose-doc.js133354631343256741 0
+52C:\musicplayah\node_modules\supports-color\readme.md133354631310623396 0
+69C:\musicplayah\node_modules\csso\cjs\replace\property\font-weight.cjs133354631338244772 0
 56C:\musicplayah\node_modules\@parcel\cache\src\FSCache.js133354631318344002 0
 54C:\musicplayah\node_modules\camelcase-css\index-es5.js133354631301495837 0
 65C:\musicplayah\node_modules\svgo\plugins\removeEmptyContainers.js133354631352392570 0
 60C:\musicplayah\node_modules\css-what\lib\commonjs\types.d.ts133354631341142400 0
 59C:\musicplayah\node_modules\caniuse-lite\data\regions\EE.js133354631391176333 0
-52C:\musicplayah\node_modules\supports-color\readme.md133354631310623396 0
-69C:\musicplayah\node_modules\csso\cjs\replace\property\font-weight.cjs133354631338244772 0
 63C:\musicplayah\node_modules\msgpackr\dist\index-no-eval.cjs.map133354631346114222 0
 59C:\musicplayah\node_modules\yaml\browser\dist\nodes\toJS.js133354631377024396 0
 62C:\musicplayah\node_modules\tailwindcss\lib\util\cloneNodes.js133354631348258513 0
@@ -1107,7 +1110,7 @@
 58C:\musicplayah\node_modules\type-fest\source\asyncify.d.ts133354631311973271 0
 45C:\musicplayah\node_modules\jiti\dist\jiti.js133354631345346280 0
 69C:\musicplayah\node_modules\sucrase\dist\types\util\formatTokens.d.ts133354631379308267 0
-30C:\musicplayah\dist\index.html133355509897628091 0
+30C:\musicplayah\dist\index.html133355718361587043 0
 51C:\musicplayah\node_modules\yaml\dist\schema\common133354631385377226 1
 75C:\musicplayah\node_modules\posthtml\node_modules\posthtml-parser\readme.md133354631336928297 0
 51C:\musicplayah\node_modules\source-map-js\README.md133354631331308186 0
@@ -1270,7 +1273,7 @@
 84C:\musicplayah\node_modules\css-select\node_modules\entities\lib\esm\escape.d.ts.map133354631359352487 0
 67C:\musicplayah\node_modules\yaml\browser\dist\schema\core\schema.js133354631371543884 0
 73C:\musicplayah\node_modules\css-select\node_modules\domutils\lib\index.js133354631338294639 0
-43C:\musicplayah\dist\prev-track.6c55074f.svg133355509897628091 0
+43C:\musicplayah\dist\prev-track.6c55074f.svg133355718361587043 0
 61C:\musicplayah\node_modules\yaml\dist\schema\common\string.js133354631374037217 0
 48C:\musicplayah\node_modules\tailwindcss\src\util133354631392722199 1
 48C:\musicplayah\node_modules\@parcel\hash\LICENSE133354631315280925 0
@@ -1392,7 +1395,7 @@
 44C:\musicplayah\node_modules\braces\README.md133354631310903459 0
 51C:\musicplayah\node_modules\postcss\lib\fromJSON.js133354631317315487 0
 48C:\musicplayah\node_modules\term-size\index.d.ts133354631321289216 0
-70C:\musicplayah\dist\Rick Astley - Never Gonna Give You Up.f1e74264.MP3133355487888026194 0
+70C:\musicplayah\dist\Rick Astley - Never Gonna Give You Up.f1e74264.MP3133355511513563670 0
 53C:\musicplayah\node_modules\yaml\dist\doc\Document.js133354631355208166 0
 53C:\musicplayah\node_modules\@parcel\core\src\index.js133354631367852333 0
 68C:\musicplayah\node_modules\@swc\helpers\esm\_object_spread_props.js133354631385157790 0
@@ -1863,8 +1866,6 @@
 44C:\musicplayah\node_modules\resolve\index.js133354631347620188 0
 59C:\musicplayah\node_modules\caniuse-lite\data\regions\BF.js133354631359985931 0
 62C:\musicplayah\node_modules\type-fest\source\set-required.d.ts133354631346582960 0
-55C:\musicplayah\node_modules\mdn-data\css\selectors.json133354631338663652 0
-52C:\musicplayah\node_modules\js-yaml\lib\type\bool.js133354631306234419 0
 46C:\musicplayah\node_modules\msgpackr\stream.js133354631338733461 0
 65C:\musicplayah\node_modules\type-fest\source\set-return-type.d.ts133354631347151440 0
 53C:\musicplayah\node_modules\svgo\dist\svgo.browser.js133354631363962699 0
@@ -2266,7 +2267,6 @@
 68C:\musicplayah\node_modules\postcss-import\lib\assign-layer-names.js133354631302044364 0
 48C:\musicplayah\node_modules\lmdb\src\lmdb-js.cpp133354631366775177 0
 74C:\musicplayah\node_modules\tailwindcss\src\lib\substituteScreenAtRules.js133354631391305982 0
-55C:\musicplayah\node_modules\tailwindcss\src\css\LICENSE133354631316906579 0
 70C:\musicplayah\node_modules\css-select\lib\pseudo-selectors\index.d.ts133354631365119606 0
 53C:\musicplayah\node_modules\tailwindcss\src\cli\build133354631392642411 1
 55C:\musicplayah\node_modules\@parcel\reporter-dev-server133354631350342911 1
@@ -2683,7 +2683,7 @@
 85C:\musicplayah\node_modules\sucrase\dist\types\transformers\CJSImportTransformer.d.ts133354631378410728 0
 80C:\musicplayah\node_modules\sucrase\dist\types\transformers\FlowTransformer.d.ts133354631379198564 0
 62C:\musicplayah\node_modules\cosmiconfig\dist\readFile.d.ts.map133354631344528469 0
-43C:\musicplayah\dist\musicplayah.3464ddca.js133355509897707879 0
+43C:\musicplayah\dist\musicplayah.3464ddca.js133355718361676801 0
 95C:\musicplayah\node_modules\caniuse-lite\data\features\mdn-css-unicode-bidi-isolate-override.js133354631400975281 0
 70C:\musicplayah\node_modules\posthtml\node_modules\posthtml-parser\dist133354631338663652 1
 85C:\musicplayah\node_modules\sucrase\dist\types\transformers\JestHoistTransformer.d.ts133354631381661978 0
@@ -3359,7 +3359,6 @@
 68C:\musicplayah\node_modules\postcss-selector-parser\dist\tokenize.js133354631342568579 0
 100C:\musicplayah\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\config\parser.js133354631369906810 0
 70C:\musicplayah\node_modules\postcss-selector-parser\dist\tokenTypes.js133354631343276687 0
-77C:\musicplayah\node_modules\postcss-selector-parser\dist\util\ensureObject.js133354631318882576 0
 72C:\musicplayah\node_modules\postcss-selector-parser\dist\util\getProp.js133354631320137141 0
 74C:\musicplayah\node_modules\caniuse-lite\data\features\cookie-store-api.js133354631372970085 0
 70C:\musicplayah\node_modules\postcss-selector-parser\dist\util\index.js133354631328715124 0
@@ -3735,6 +3734,8 @@
 66C:\musicplayah\node_modules\css-select\node_modules\dom-serializer133354631341621120 1
 44C:\musicplayah\node_modules\mdn-data\LICENSE133354631299560998 0
 50C:\musicplayah\node_modules\mdn-data\l10n\css.json133354631321299217 0
+55C:\musicplayah\node_modules\mdn-data\css\selectors.json133354631338663652 0
+52C:\musicplayah\node_modules\js-yaml\lib\type\bool.js133354631306234419 0
 79C:\musicplayah\node_modules\@jridgewell\trace-mapping\dist\types\by-source.d.ts133354631322550979 0
 72C:\musicplayah\node_modules\@swc\helpers\_\_sliced_to_array\package.json133354631395744120 0
 62C:\musicplayah\node_modules\mdn-data\css\selectors.schema.json133354631339413337 0
@@ -3883,9 +3884,9 @@
 70C:\musicplayah\node_modules\lmdb\dependencies\lz4\lib\liblz4-dll.rc.in133354631373269270 0
 66C:\musicplayah\node_modules\lmdb\dependencies\lz4\lib\liblz4.pc.in133354631373438813 0
 52C:\musicplayah\node_modules\is-core-module\README.md133354631318782836 0
+59C:\musicplayah\node_modules\caniuse-lite\data\regions\FK.js133354631393011467 0
 61C:\musicplayah\node_modules\lmdb\dependencies\lz4\lib\LICENSE133354631326770317 0
 50C:\musicplayah\node_modules\domelementtype\lib\esm133354631318862631 1
-59C:\musicplayah\node_modules\caniuse-lite\data\regions\FK.js133354631393011467 0
 80C:\musicplayah\node_modules\@babel\highlight\node_modules\chalk\types\index.d.ts133354631315899273 0
 64C:\musicplayah\node_modules\lmdb\dependencies\lz4\lib\lz4frame.c133354631347011824 0
 75C:\musicplayah\node_modules\@swc\helpers\lib\_class_apply_descriptor_get.js133354631372780579 0
@@ -3993,7 +3994,7 @@
 65C:\musicplayah\node_modules\lightningcss-win32-x64-msvc\README.md133354631303914291 0
 45C:\musicplayah\node_modules\lightningcss\node133354631336070583 1
 54C:\musicplayah\node_modules\css-select\lib\esm\sort.js133354631335581890 0
-38C:\musicplayah\dist\index.689f5f05.css133355509897707879 0
+38C:\musicplayah\dist\index.689f5f05.css133355718361676801 0
 65C:\musicplayah\node_modules\@swc\helpers\esm\_set_prototype_of.js133354631386673732 0
 50C:\musicplayah\node_modules\lightningcss\README.md133354631326341057 0
 96C:\musicplayah\node_modules\@parcel\optimizer-htmlnano\node_modules\mdn-data\css\properties.json133354631334913671 0
@@ -4588,7 +4589,7 @@
 73C:\musicplayah\node_modules\dom-serializer\node_modules\entities\lib\maps133354631320675710 1
 85C:\musicplayah\node_modules\dom-serializer\node_modules\entities\lib\maps\decode.json133354631314672548 0
 76C:\musicplayah\node_modules\css-select\node_modules\domhandler\lib\node.d.ts133354631345515811 0
-48C:\musicplayah\dist\music-player@3x.22496575.png133355509900962586 0
+48C:\musicplayah\dist\music-player@3x.22496575.png133355628991085258 0
 85C:\musicplayah\node_modules\dom-serializer\node_modules\entities\lib\maps\legacy.json133354631318304114 0
 62C:\musicplayah\node_modules\css-tree\lib\syntax\scope\index.js133354631384334831 0
 64C:\musicplayah\node_modules\dom-serializer\lib\foreignNames.d.ts133354631327199170 0
@@ -4941,7 +4942,7 @@
 65C:\musicplayah\node_modules\csso\cjs\replace\atrule\keyframes.cjs133354631343685600 0
 64C:\musicplayah\node_modules\@swc\helpers\lib\_define_property.js133354631380624749 0
 53C:\musicplayah\node_modules\csso\cjs\clean\Atrule.cjs133354631320466270 0
-43C:\musicplayah\dist\play-track.f417bfdc.svg133355509897628091 0
+43C:\musicplayah\dist\play-track.f417bfdc.svg133355718361587043 0
 58C:\musicplayah\node_modules\csso\cjs\clean\Declaration.cjs133354631336120444 0
 52C:\musicplayah\node_modules\csso\cjs\clean\index.cjs133354631339842195 0
 59C:\musicplayah\node_modules\csso\cjs\clean\TypeSelector.cjs133354631348527763 0
@@ -6512,6 +6513,7 @@
 83C:\musicplayah\node_modules\@swc\helpers\cjs\_class_check_private_static_access.cjs133354631334215540 0
 59C:\musicplayah\node_modules\@nodelib\fs.walk\out\index.d.ts133354631334165675 0
 80C:\musicplayah\node_modules\@swc\helpers\cjs\_class_extract_field_descriptor.cjs133354631336289996 0
+42C:\musicplayah\dist\index.1303bb05.css.map133355718361756601 0
 70C:\musicplayah\node_modules\@swc\helpers\cjs\_class_name_tdz_error.cjs133354631337327219 0
 73C:\musicplayah\node_modules\@swc\helpers\cjs\_class_private_field_get.cjs133354631339124121 0
 73C:\musicplayah\node_modules\@swc\helpers\cjs\_class_private_field_set.cjs133354631341890402 0
@@ -6710,7 +6712,7 @@
 78C:\musicplayah\node_modules\@parcel\transformer-react-refresh-wrap\lib\helpers133354631321438825 1
 101C:\musicplayah\node_modules\@parcel\transformer-react-refresh-wrap\lib\ReactRefreshWrapTransformer.js133354631326919916 0
 89C:\musicplayah\node_modules\@parcel\transformer-react-refresh-wrap\lib\helpers\helpers.js133354631321797877 0
-47C:\musicplayah\dist\musicplayah.3464ddca.js.map133355509897777703 0
+47C:\musicplayah\dist\musicplayah.3464ddca.js.map133355718361746633 0
 59C:\musicplayah\node_modules\@parcel\transformer-raw\LICENSE133354631320206955 0
 60C:\musicplayah\node_modules\@parcel\transformer-posthtml\lib133354631320226906 1
 64C:\musicplayah\node_modules\@parcel\transformer-posthtml\LICENSE133354631315869355 0
@@ -7395,7 +7397,7 @@
 72C:\musicplayah\node_modules\@parcel\hash\parcel-hash.linux-x64-musl.node133354631359143056 0
 72C:\musicplayah\node_modules\@parcel\hash\parcel-hash.win32-x64-msvc.node133354631361309790 0
 49C:\musicplayah\node_modules\@parcel\graph\LICENSE133354631318284246 0
-38C:\musicplayah\dist\cd@2x.5cb70291.png133355509897727829 0
+38C:\musicplayah\dist\cd@2x.5cb70291.png133355718361746633 0
 54C:\musicplayah\node_modules\@parcel\graph\package.json133354631342119780 0
 43C:\musicplayah\node_modules\.bin\cssesc.cmd133354631416916508 0
 45C:\musicplayah\node_modules\@parcel\graph\src133354631341282019 1
@@ -7483,7 +7485,7 @@
 91C:\musicplayah\node_modules\@parcel\core\test\fixtures\invalid-source-not-file\src\index.js133354631368151511 0
 84C:\musicplayah\node_modules\@parcel\core\test\fixtures\invalid-distpath\package.json133354631384883364 0
 75C:\musicplayah\node_modules\@parcel\core\test\fixtures\glob-like\[entry].js133354631347061688 0
-42C:\musicplayah\dist\index.689f5f05.css.map133355509897787669 0
+42C:\musicplayah\dist\index.689f5f05.css.map133355718361756601 0
 85C:\musicplayah\node_modules\@parcel\core\test\fixtures\duplicate-targets\package.json133354631384823524 0
 90C:\musicplayah\node_modules\@parcel\core\test\fixtures\custom-targets-distdir\package.json133354631384604115 0
 91C:\musicplayah\node_modules\@parcel\core\test\fixtures\custom-format-infer-ext\package.json133354631384245076 0
@@ -7584,6 +7586,7 @@
 54C:\musicplayah\node_modules\@nodelib\fs.walk\out\types133354631335911005 1
 68C:\musicplayah\node_modules\@nodelib\fs.walk\out\readers\common.d.ts133354631333472404 0
 66C:\musicplayah\node_modules\@nodelib\fs.walk\out\readers\common.js133354631310833176 0
+44C:\musicplayah\dist\pause-track.3f326683.svg133355718361587043 0
 66C:\musicplayah\node_modules\@nodelib\fs.walk\out\readers\reader.js133354631319207927 0
 64C:\musicplayah\node_modules\@nodelib\fs.walk\out\readers\sync.js133354631325413533 0
 67C:\musicplayah\node_modules\@nodelib\fs.walk\out\providers\async.js133354631302353538 0
@@ -7718,6 +7721,7 @@
 40C:\musicplayah\node_modules\.bin\sucrase133354631416976341 0
 45C:\musicplayah\node_modules\.bin\sucrase-node133354631416976341 0
 44C:\musicplayah\node_modules\.bin\sucrase.ps1133354631416976341 0
-42C:\musicplayah\dist\artist@2x.8c52d6f3.png133355509897787669 0
-40C:\musicplayah\dist\favicon.956925d8.ico133355509897638065 0
-43C:\musicplayah\dist\next-track.cfe38949.svg133355509897578231 0
+42C:\musicplayah\dist\artist@2x.8c52d6f3.png133355718362031054 0
+40C:\musicplayah\dist\favicon.956925d8.ico133355718362031054 0
+38C:\musicplayah\dist\index.1303bb05.css133355718361676801 0
+43C:\musicplayah\dist\next-track.cfe38949.svg133355718361587043 0

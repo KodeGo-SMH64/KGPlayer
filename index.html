@@ -32,14 +32,16 @@
           
           <!-- TIMELINE -->
           <div
+            id="duration"
             class="absolute top-[0px] left-[348px] font-semibold flex items-center justify-center w-[38px] h-4"
           >
-            03:32
+            00:00
           </div>
           <div
+            id="currentTime"
             class="absolute top-[0px] left-[0px] font-semibold text-left flex items-center w-[38px] h-4"
           >
-            01:44
+            00:00
           </div>
         </div>
 
@@ -156,12 +158,40 @@ function playPause() {
   }
 }
 
+const currentTimeElement = document.getElementById("currentTime");
+const durationElement = document.getElementById("duration");
+
+player.onloadedmetadata = function () {
+  // Update the seekbar max and initial value with the duration
+  seekbar.max = player.duration;
+  seekbar.value = 0;
+
+//CONVERTING THE DURATION TO MINUTES AND SECONDS
+const durationMinutes = Math.floor(player.duration / 60);
+const durationSeconds = Math.floor(player.duration % 60);
+
+//ADD LEADING ZEROS TO THE TIME VALUES ??????
+const formattedDuration = `${durationMinutes.toString().padStart(2, '0')}:${durationSeconds.toString().padStart(2, '0')}`;
+
+// UPDATE THE CONTENT OF THE DIV ELEMENTS
+durationElement.textContent = formattedDuration;
+}
+
 function updateSeekbar() {
   seekbar.value = player.currentTime;
   thumbSlider.style.left = `${(seekbar.value / seekbar.max) * 100}%`; // MOVES THE THUMB SLIDER ALONG THE SEEKBAR
   if (!player.paused) {
     requestAnimationFrame(updateSeekbar);
   }
+//CONVERTING THE CURRENTTIME TO MINUTES AND SECONDS
+const currentTimeMinutes = Math.floor(player.currentTime / 60);
+const currentTimeSeconds = Math.floor(player.currentTime % 60);
+
+//ADD LEADING ZEROS TO THE TIME VALUES ??????
+const formattedCurrentTime = `${currentTimeMinutes.toString().padStart(2, '0')}:${currentTimeSeconds.toString().padStart(2, '0')}`;
+
+// UPDATE THE CONTENT OF THE DIV ELEMENTS
+currentTimeElement.textContent = formattedCurrentTime;
 }
 
 player.addEventListener("play", () => {
