@@ -100,7 +100,7 @@ function playPause() {
 }
 function updateSeekbar() {
     seekbar.value = player.currentTime;
-    thumbSlider.style.left = `${seekbar.value / seekbar.max * 100}%`; // MOVE THE THUMB SLIDER ALONG THE SEEKBAR
+    thumbSlider.style.left = `${seekbar.value / seekbar.max * 100}%`; // MOVES THE THUMB SLIDER ALONG THE SEEKBAR
     if (!player.paused) requestAnimationFrame(updateSeekbar);
 }
 player.addEventListener("play", ()=>{
@@ -111,9 +111,19 @@ player.addEventListener("pause", ()=>{
     playButton.classList.remove("playing");
     pauseAnimation();
 });
-seekbar.addEventListener("input", ()=>{
-    player.currentTime = seekbar.value; // SEEK THE AUDIO TO THE POSITION OF THE SEEKBAR
+// ADDED AN EVENT LISTENER TO CONTINUOUSLY UPDATE THE THUMB SLIDER POSITION WHILE AUDIO IS SEEKING (PLAYING OR PAUSED)
+player.addEventListener("timeupdate", ()=>{
+    seekbar.value = player.currentTime;
     thumbSlider.style.left = `${seekbar.value / seekbar.max * 100}%`; // MOVE THE THUMB SLIDER ALONG THE SEEKBAR
+});
+// ADDED AN EVENT LISTENER TO STOP ANIMATION AND RESET THUMB SLIDER POSITION WHEN THE AUDIO HAS ENDED
+player.addEventListener("ended", ()=>{
+    pauseAnimation();
+    thumbSlider.style.left = "0"; // RESET THUMB SLIDER POSITION TO THE BEGINNING
+});
+seekbar.addEventListener("input", ()=>{
+    player.currentTime = seekbar.value; // SEEKS THE AUDIO TO THE POSITION OF THE SEEKBAR
+    thumbSlider.style.left = `${seekbar.value / seekbar.max * 100}%`; // MOVES THE THUMB SLIDER ALONG THE SEEKBAR
 });
 thumbSlider.addEventListener("mousedown", (event)=>{
     // WHEN THE THUMB SLIDER IS CLICKED, UPDATE THE SEEKBAR AND SEEK TO THE CLICKED POSITION
@@ -122,7 +132,7 @@ thumbSlider.addEventListener("mousedown", (event)=>{
     const seekbarWidth = rect.width;
     const seekPosition = offsetX / seekbarWidth * seekbar.max;
     player.currentTime = seekPosition;
-    thumbSlider.style.left = `${seekPosition / seekbar.max * 100}%`; // MOVE THE THUMB SLIDER ALONG THE SEEKBAR
+    thumbSlider.style.left = `${seekPosition / seekbar.max * 100}%`; // MOVES THE THUMB SLIDER ALONG THE SEEKBAR
     // PAUSE THE AUDIO WHILE DRAGGING THE SLIDER
     player.pause();
     // EVENT LISTENER FOR WHEN THE USER STOPS DRAGGING THE THUMB SLIDER
