@@ -101,7 +101,7 @@ function playPause() {
 const currentTimeElement = document.getElementById("currentTime");
 const durationElement = document.getElementById("duration");
 player.onloadedmetadata = function() {
-    // Update the seekbar max and initial value with the duration
+    // UPDATE THE SEEKBAR MAX AND INITIAL VALUE WITH THE DURATION
     seekbar.max = player.duration;
     seekbar.value = 0;
     //CONVERTING THE DURATION TO MINUTES AND SECONDS
